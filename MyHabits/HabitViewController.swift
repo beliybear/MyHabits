@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HabitViewController: UIViewController {
+final class HabitViewController: UIViewController {
     
     private lazy var stackViewVertical: UIStackView = {
         let stackView = UIStackView()

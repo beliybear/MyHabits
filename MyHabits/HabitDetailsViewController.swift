@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HabitDetailsViewController: UIViewController {
+final class HabitDetailsViewController: UIViewController {
     
     var habit = Habit(name: "", date: Date(), color: UIColor.clear)
     
@@ -66,8 +66,8 @@ class HabitDetailsViewController: UIViewController {
         habitView.navigationItem.title = "Править"
         habitView.textField.text = habit.name
         habitView.index = HabitsStore.shared.habits.firstIndex(where: {($0.name == habit.name)}) ?? 0
-        habitView.deleteLabel.isHidden = false
         habitView.delegate = self
+        habitView.deleteLabel.isHidden = false
         self.present(navController, animated: true)
     }
 }

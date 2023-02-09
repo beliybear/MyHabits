@@ -7,7 +7,7 @@
 
 import UIKit
 
-class InfoViewController: UIViewController {
+final class InfoViewController: UIViewController {
     
     private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -69,6 +69,8 @@ class InfoViewController: UIViewController {
         stackView.addArrangedSubview(infoText)
         setupNavBar()
         setupConstraints()
+        
+        self.scrollView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0)
     }
     
     private func setupNavBar(){
@@ -79,7 +81,7 @@ class InfoViewController: UIViewController {
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
+            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
             scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),

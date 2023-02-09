@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HabitCollectionViewCell: UICollectionViewCell {
+final class HabitCollectionViewCell: UICollectionViewCell {
     
     lazy var nameTextView: UITextView = {
         let nameTextView = UITextView()
